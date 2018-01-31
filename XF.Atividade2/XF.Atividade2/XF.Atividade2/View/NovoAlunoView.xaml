@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.Atividade2.View.NovoAlunoView">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" x:Name="btnSalvar" Command="{Binding OnSalvarAluno}" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtRM" Placeholder="RM" Text="{Binding Aluno.RM, Mode=TwoWay}" />
+            <Entry x:Name="txtNome" Placeholder="Nome" Text="{Binding Aluno.Nome, Mode=TwoWay}" />
+            <Entry x:Name="txtEmail" Placeholder="Email" Text="{Binding Aluno.Email, Mode=TwoWay}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

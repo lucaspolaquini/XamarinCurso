@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF.Atividade2.View.AlunoView">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adicionar" x:Name="btnAddAluno" Command="{Binding OnNovoAluno}"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ListView x:Name="lstAlunos" ItemsSource="{Binding Alunos}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="{Binding RM}"/>
+                            <Label Text="{Binding Nome}"/>
+                            <Label Text="{Binding Email}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+    
+</ContentPage>
